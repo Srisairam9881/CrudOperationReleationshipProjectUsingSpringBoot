@@ -11,13 +11,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/branch")
+@RequestMapping("/api")
 public class StudentController {
 
     @Autowired
     private StudentService studentService;
 
-    @PostMapping("/{branchId}/student")
+    @PostMapping("/branch/{branchId}/student")
     public ResponseEntity<?> addStudent(@PathVariable Long branchId, @RequestBody Student student){
         student = studentService.addStudent(branchId,student);
         return ResponseEntity.status(HttpStatus.CREATED).body(student);
