@@ -51,18 +51,4 @@ public class BranchService {
             return false;
         }
     }
-
-
-    public Student addStudent(Long branchId, Student student){
-        if(branchRepository.existsById(branchId)){
-            Branch branch = branchRepository.findById(branchId).get();
-            student = studentRepository.save(student);
-
-            branch.getStudentList().add(student);
-            branchRepository.save(branch);
-            return student;
-        }else{
-            return null;
-        }
-    }
 }
