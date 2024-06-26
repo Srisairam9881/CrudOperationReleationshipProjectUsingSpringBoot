@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.ustg.springapp.model.Department;
 import com.ustg.springapp.model.Employee;
+import com.ustg.springapp.model.Student;
 import com.ustg.springapp.repository.DepartmentRepository;
 import com.ustg.springapp.repository.EmployeeRepository;
 
@@ -51,4 +52,5 @@ public class EmployeeService {
 		}
 		return false;
 	}
+	
 }
